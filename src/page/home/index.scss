@@ -1,0 +1,29 @@
+#yt-app {
+    height: 100%;
+}
+.wellcome {
+    height:100%;
+    .originPageLeft{
+        height: 100%;
+        float: left;
+        padding: 0;
+        margin: 0;
+        ul {
+            height: calc(100% - 40px);
+            margin: 0;
+            padding: 0;
+        }
+        .themeSettingBox {
+            height: 40px;
+            background: #404040;
+        }
+        .easeIn {
+            transition: width 2s;
+        }
+    }
+    .originPageRight {
+        float: right;
+    }
+}
+
+

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   重设
+   ========================================================================== */
+/*// margin padding reset 部分取自一丝的 neat.css*/
+body, dl, dd, /* dt, 默认没边距 */
+ul, ol, /*li, 默认没边距 */
+h1, h2, h3, h4, h5, h6, pre, /* code, 默认没边距 */
+form, fieldset, legend, input, textarea,
+p, blockquote, figure, hr, menu, dir, ul,
+thead, tbody, tfoot /* th, td 默认 padding:1px */
+{
+    margin: 0;
+    padding: 0;
+}
+
