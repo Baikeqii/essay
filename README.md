@@ -1,1 +1,1 @@
-home
+Enjoy yourself!
