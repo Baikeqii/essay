@@ -5,7 +5,7 @@
   "main": "readme.md",
   "scripts": {
     "clean": "rimraf ./dist",
-    "dev": "webpack-dev-server --color --progress --config ./webpack.dev.config.js",
+    "start": "webpack-dev-server --color --progress --config ./webpack.dev.config.js",
     "build-dev": "npm run clean && cross-env BUILD_ENV=dev && webpack -p --progress --config ./webpack.build.config.js",
     "build-test": "npm run clean && BUILD_ENV=test && webpack -p --progress --config ./webpack.build.config.js",
     "build-prod": "npm run clean && BUILD_ENV=prod && webpack -p --progress --config ./webpack.build.config.js"
@@ -59,7 +59,7 @@
     "json-loader": "^0.5.7",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.9.3",
     "postcss-loader": "^2.0.6",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.6",
