@@ -2,17 +2,16 @@ import React from 'react'
 
 import {Router, browserHistory} from 'react-router'
 
-import './base.css'
-import './common.css'
+import '../../public/style/base.css'
 
-import Home from '../../page/home'
+import MenuSetting from '../../component/home/MenuSetting'
 import {local, session} from 'common/util/storage.js'
-import pageRoutes from '../../page/routeConfig.js'
+import pageRoutes from '../../component/routeConfig.js'
 
 let routes = [
     {
         path: '/',
-        component: Home,
+        component: MenuSetting,
         indexRoute: {
             onEnter(nextState, replace) {
                 replace('/home')

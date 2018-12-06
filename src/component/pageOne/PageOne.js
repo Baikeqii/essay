@@ -1,12 +1,7 @@
-"use strict"
 import React,{Component} from 'react';
-import {Checkbox,Modal,Button} from 'antd';
-import TaskModal from './taskModal.jsx';
-import { Link } from 'react-router'
-import './task.scss';
-import fetchData from '../../util/fetch.js'
+import './pageOne.scss';
 
-class Task extends React.Component {
+class PageOne extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -30,4 +25,4 @@ class Task extends React.Component {
     }
 }
 
-export default Task
+export default PageOne

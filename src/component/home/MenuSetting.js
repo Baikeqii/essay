@@ -1,16 +1,9 @@
-"use strict"
-
 import React,{Component} from 'react';
 import {Icon,Card, Menu, Button, Switch} from 'antd';
-import createG2 from 'g2-react';
 import { Stat } from 'g2';
-import ReactDOM from 'react-dom';
-import data from './data.json';
-import './index.scss';
-import Task from '../../component/todaytask/task.jsx';
-import Immediate from '../../component/immediate/immediate.jsx';
-import Hotdeal from '../../component/hotDeal/hotDeal.jsx';
-import RecentRecord from '../../component/recentRecord/recentRecord.jsx';
+import './MenuSetting.scss';
+import PageOne from '../../component/pageOne/PageOne.js';
+import PageTwo from '../../component/pageTwo/PageTwo.js';
 
 const SubMenu = Menu.SubMenu,
         MenuItem = Menu.Item,
@@ -20,7 +13,7 @@ const SubMenu = Menu.SubMenu,
             {title: "third", key: "third", iconType: "bank"},
             {title: "fouth", key: "fouth", iconType: "star", children: [{title: "fouth-one", subKey: "fouth-one"},{title: "fouth-two", subKey: "fouth-two"}]},
         ]
-class Home extends React.Component {
+class MenuSetting extends React.Component {
 
     constructor(props) {
         super(props);
@@ -106,12 +99,9 @@ class Home extends React.Component {
         let { currentItemKey } = this.state;
         switch (currentItemKey) {
             case "first":
-                return <Task/>
-            break;
+                return <PageOne/>;
             case "second":
-                return <Immediate/>
-
-            break;
+                return <PageTwo/>;
             case "second-one":
 
             break;
@@ -172,4 +162,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home
+export default MenuSetting

@@ -2,9 +2,9 @@
 
 import React,{Component} from 'react';
 import {Checkbox,Modal} from 'antd';
-import './immediate.css';
+import './pageTwo.scss';
 import { Link } from 'react-router'
-class immediate extends React.Component {
+class PageTwo extends React.Component {
 
     constructor(props) {
         super(props);
@@ -31,4 +31,4 @@ class immediate extends React.Component {
  }
     
 
-export default immediate
+export default PageTwo
