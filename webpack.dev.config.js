@@ -14,7 +14,7 @@ let webpackConfig = {
     devServer: {
         historyApiFallback: true,
         inline: true,
-        port: 9080,
+        port: 9090,
         // host: '192.168.30.216',
         compress: true,
         // https://webpack.github.io/docs/node.js-api.html

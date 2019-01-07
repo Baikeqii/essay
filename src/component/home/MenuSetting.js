@@ -4,6 +4,7 @@ import { Stat } from 'g2';
 import './MenuSetting.scss';
 import PageOne from '../../component/pageOne/PageOne.js';
 import PageTwo from '../../component/pageTwo/PageTwo.js';
+import PageThree from "../pageThree/PageThree";
 
 const SubMenu = Menu.SubMenu,
         MenuItem = Menu.Item,
@@ -18,7 +19,7 @@ class MenuSetting extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentItemKey: "first",
+            currentItemKey: "third",
             collapsed: false,
             theme: "dark"
         }
@@ -63,29 +64,28 @@ class MenuSetting extends React.Component {
 
     getMenuItemComp(optionData)
     {
-        return optionData.map((item,index)=>{
-            if(item.children && item.children.length>0)
+        return optionData.map((optionItem,index) =>
+        {
+            if(optionItem.children && optionItem.children.length>0)
             {
-                return <SubMenu key={item.key} title={<span><Icon type={item.iconType}/><span>{item.title}</span></span>}>
+                return <SubMenu key={optionItem.key} title={<span><Icon type={optionItem.iconType}/><span>{optionItem.title}</span></span>}>
                         {
-                            item.children.map(subItem => <MenuItem key={subItem.subKey}>{subItem.title}</MenuItem>)
+                            this.getMenuItemComp(optionItem.children)
                         }
                         </SubMenu>
             }
             else
             {
-                return <MenuItem key={item.key}>
+                return <MenuItem key={optionItem.key}>
                     <span>
-                        <Icon type={item.iconType}/>
+                        <Icon type={optionItem.iconType}/>
                         <span>
-                            {item.title}
+                            {optionItem.title}
                         </span>
                     </span>
                     </MenuItem>
             }
 
-            if(item.children)
-                this.getMenuItemComp(item.children)
         })
     }
 
@@ -102,14 +102,8 @@ class MenuSetting extends React.Component {
                 return <PageOne/>;
             case "second":
                 return <PageTwo/>;
-            case "second-one":
-
-            break;
-            case "second-two":
-
-            break;
             case "third":
-
+                return <PageThree/>;
             break;
             case "fouth":
 
@@ -145,7 +139,7 @@ class MenuSetting extends React.Component {
                     </div>
 
                     <Menu
-                        defaultSelectedKeys={['1']}
+                        defaultSelectedKeys={['third']}
                         mode="inline"
                         theme={this.state.theme}
                         inlineCollapsed={this.state.collapsed}
