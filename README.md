@@ -256,6 +256,8 @@ DEMO
 * [ECMAScript 5(ES5)中bind方法、自定义及小拓展](http://www.zhangxinxu.com/wordpress/2012/10/ecmascript-es5-bind-array-slice-call-apply/)
 * [使用Mock.js进行独立于后端的前端开发](https://segmentfault.com/a/1190000003087224)
 
+*** shell
+$ npm start
 License
 ----
 
