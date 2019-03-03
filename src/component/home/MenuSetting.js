@@ -4,6 +4,7 @@ import { Stat } from 'g2';
 import './MenuSetting.scss';
 import PageOne from '../../component/pageOne/PageOne.js';
 import PageTwo from '../../component/pageTwo/PageTwo.js';
+import PageThree from "../pageThree/PageThree";
 
 const SubMenu = Menu.SubMenu,
         MenuItem = Menu.Item,
@@ -25,29 +26,6 @@ class MenuSetting extends React.Component {
 
     }
 
-    getDefaultProps()
-    {
-
-    }
-
-    getInialStatel()
-    {
-
-    }
-
-    componentWillMount() {
-
-    }
-
-    componentDidMount() {
-
-    }
-
-    componentWillReceiveProps() {
-
-    }
-
-
     toggleCollapsed()
     {
         this.setState({
@@ -63,12 +41,13 @@ class MenuSetting extends React.Component {
 
     getMenuItemComp(optionData)
     {
-        return optionData.map((item,index)=>{
+        return optionData.map(item =>
+        {
             if(item.children && item.children.length>0)
             {
                 return <SubMenu key={item.key} title={<span><Icon type={item.iconType}/><span>{item.title}</span></span>}>
                         {
-                            item.children.map(subItem => <MenuItem key={subItem.subKey}>{subItem.title}</MenuItem>)
+                            this.getMenuItemComp(item.children)
                         }
                         </SubMenu>
             }
@@ -83,9 +62,6 @@ class MenuSetting extends React.Component {
                     </span>
                     </MenuItem>
             }
-
-            if(item.children)
-                this.getMenuItemComp(item.children)
         })
     }
 
@@ -109,8 +85,7 @@ class MenuSetting extends React.Component {
 
             break;
             case "third":
-
-            break;
+                return <PageThree/>;
             case "fouth":
 
             break;
