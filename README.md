@@ -258,6 +258,7 @@ DEMO
 
 ```shell
 $ npm start
+```
 License
 ----
 
