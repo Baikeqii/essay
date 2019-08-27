@@ -1,16 +1,10 @@
 "use strict"
 
-import React,{Component} from 'react';
+import React from 'react';
 import {Icon,Card, Menu, Button, Switch} from 'antd';
-import createG2 from 'g2-react';
-import { Stat } from 'g2';
-import ReactDOM from 'react-dom';
-import data from './data.json';
 import './index.scss';
 import Task from '../../component/todaytask/task.jsx';
 import Immediate from '../../component/immediate/immediate.jsx';
-import Hotdeal from '../../component/hotDeal/hotDeal.jsx';
-import RecentRecord from '../../component/recentRecord/recentRecord.jsx';
 
 const SubMenu = Menu.SubMenu,
         MenuItem = Menu.Item,
@@ -31,29 +25,6 @@ class Home extends React.Component {
         }
 
     }
-
-    getDefaultProps()
-    {
-
-    }
-
-    getInialStatel()
-    {
-
-    }
-
-    componentWillMount() {
-
-    }
-
-    componentDidMount() {
-
-    }
-
-    componentWillReceiveProps() {
-
-    }
-
 
     toggleCollapsed()
     {
@@ -106,12 +77,9 @@ class Home extends React.Component {
         let { currentItemKey } = this.state;
         switch (currentItemKey) {
             case "first":
-                return <Task/>
-            break;
-            case "second":
                 return <Immediate/>
-
-            break;
+            case "second":
+                return <Task/>
             case "second-one":
 
             break;

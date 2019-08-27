@@ -1,10 +1,6 @@
 "use strict"
-import React,{Component} from 'react';
-import {Checkbox,Modal,Button} from 'antd';
-import TaskModal from './taskModal.jsx';
-import { Link } from 'react-router'
+import React from 'react';
 import './task.scss';
-import fetchData from '../../util/fetch.js'
 
 class Task extends React.Component {
     constructor(props) {

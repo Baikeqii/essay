@@ -1,9 +1,8 @@
 "use strict"
 
-import React,{Component} from 'react';
-import {Checkbox,Modal} from 'antd';
+import React from 'react';
 import './immediate.css';
-import { Link } from 'react-router'
+
 class immediate extends React.Component {
 
     constructor(props) {
@@ -13,7 +12,6 @@ class immediate extends React.Component {
         }
     }
     render() {
-        
         return (
             <div className="immediate">
                 <div className="container">
