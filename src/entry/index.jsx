@@ -1,11 +1,21 @@
-"use strict"
-
 import React from 'react'
-import ReactDOM from 'react-dom'
 import  'babel-polyfill'
-
-import App from '../framework/app/App.jsx'
-
-ReactDOM.render((
-    <App />
+import { render } from 'react-dom';
+import {browserHistory, Router} from "react-router";
+import MenuSetting from "../component/home/MenuSetting";
+import pageRoutes from "../component/routeConfig";
+const routes = [
+    {
+        path: '/',
+        component: MenuSetting,
+        indexRoute: {
+            onEnter(nextState, replace) {
+                replace('/home')
+            }
+        },
+        childRoutes: pageRoutes,
+    },
+];
+render((
+    <Router routes={routes} history={browserHistory}/>
 ), document.getElementById('yt-app'))

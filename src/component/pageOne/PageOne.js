@@ -1,8 +1,7 @@
-"use strict"
-import React from 'react';
-import './task.scss';
+import React,{Component} from 'react';
+import './pageOne.scss';
 
-class Task extends React.Component {
+class PageOne extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -26,4 +25,4 @@ class Task extends React.Component {
     }
 }
 
-export default Task
+export default PageOne

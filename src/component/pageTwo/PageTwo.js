@@ -1,9 +1,9 @@
 "use strict"
 
 import React from 'react';
-import './immediate.css';
-
-class immediate extends React.Component {
+import './pageTwo.scss';
+import { Link } from 'react-router'
+class PageTwo extends React.Component {
 
     constructor(props) {
         super(props);
@@ -29,4 +29,4 @@ class immediate extends React.Component {
  }
     
 
-export default immediate
+export default PageTwo
