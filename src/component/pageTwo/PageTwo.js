@@ -2,7 +2,6 @@
 
 import React from 'react';
 import './pageTwo.scss';
-import { Link } from 'react-router'
 class PageTwo extends React.Component {
 
     constructor(props) {

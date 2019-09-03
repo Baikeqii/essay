@@ -1,0 +1,40 @@
+.game-wrapper {
+    width: 700px;
+    height: 700px;
+    .wrapper {
+        // margin: 100px auto;
+        width: 200px;
+        height: 200px;
+        perspective: 600px;
+        float: left;
+
+    }
+      
+    .card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+        &.active {
+            transform: rotateY(180deg);
+        }
+    }
+      
+    .card-face {
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        &.card-front {
+            background-size: contain!important;
+        }
+        &.card-back {
+            background: url('./constant/img/back.jpg') no-repeat center;
+            background-size: contain;
+            transform: rotateY(180deg);
+        }
+    }
+}

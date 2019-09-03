@@ -1,10 +1,10 @@
-import React,{Component} from 'react';
+import React from 'react';
 import {Icon,Card, Menu, Button, Switch} from 'antd';
-import { Stat } from 'g2';
 import './MenuSetting.scss';
 import PageOne from '../../component/pageOne/PageOne.js';
 import PageTwo from '../../component/pageTwo/PageTwo.js';
 import PageThree from "../pageThree/PageThree";
+import Game from '../Game/Game';
 
 const SubMenu = Menu.SubMenu,
         MenuItem = Menu.Item,
@@ -75,7 +75,7 @@ class MenuSetting extends React.Component {
         let { currentItemKey } = this.state;
         switch (currentItemKey) {
             case "first":
-                return <PageOne/>;
+                return <Game />;
             case "second":
                 return <PageTwo/>;
             case "second-one":
@@ -87,7 +87,7 @@ class MenuSetting extends React.Component {
             case "third":
                 return <PageThree/>;
             case "fouth":
-
+                return <PageOne/>;
             break;
 
             default:
