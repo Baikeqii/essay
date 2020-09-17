@@ -2,7 +2,7 @@
 
 import React,{Component} from 'react';
 import {Checkbox,Modal} from 'antd';
-import './pageTwo.scss';
+import './pageTwo.less';
 import { Link } from 'react-router'
 class PageTwo extends React.Component {
 

@@ -1,6 +1,6 @@
 "use strict"
 import React,{Component} from 'react';
-import './pageThree.scss';
+import './pageThree.less';
 import { Tabs, Radio } from 'antd';
 
 const TabPane = Tabs.TabPane,
@@ -24,7 +24,7 @@ class PageThree extends React.Component {
     render()
     {
         let {mode} = this.state;
-
+        const Typeahead = require('react-typeahead').Typeahead
         return <div className="pageThreeWrap">
             <RadioGroup onChange={this.handleModeChange.bind(this)} value={mode} style={{ marginBottom: 8 }}>
                 <RadioButton value="top">Horizontal</RadioButton>
@@ -44,7 +44,12 @@ class PageThree extends React.Component {
                 <TabPane tab="Tab 8" key="8">Content of tab 8</TabPane>
                 <TabPane tab="Tab 9" key="9">Content of tab 9</TabPane>
                 <TabPane tab="Tab 10" key="10">Content of tab 10</TabPane>
-                <TabPane tab="Tab 11" key="11">Content of tab 11</TabPane>
+                <TabPane tab="Tab 11" key="11">
+                    <Typeahead
+                        options={['John', 'Paul', 'George', 'Ringo']}
+                        maxVisible={2}
+                    />
+                </TabPane>
             </Tabs>
         </div>
     }

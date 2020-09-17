@@ -2,14 +2,14 @@
     height: 100%;
 }
 .wellcome {
+    display: flex;
     height:100%;
     .originPageLeft{
         height: 100%;
-        float: left;
         padding: 0;
         margin: 0;
         ul {
-            height: calc(100% - 40px);
+            height: ~'calc(100% - 40px)';
             margin: 0;
             padding: 0;
         }
@@ -22,7 +22,7 @@
         }
     }
     .originPageRight {
-        float: right;
+        flex-grow: 1;
     }
 }
 

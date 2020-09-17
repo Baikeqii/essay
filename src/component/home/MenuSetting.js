@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {Icon,Card, Menu, Button, Switch} from 'antd';
 import { Stat } from 'g2';
-import './MenuSetting.scss';
+import './MenuSetting.less';
 import PageOne from '../../component/pageOne/PageOne.js';
 import PageTwo from '../../component/pageTwo/PageTwo.js';
 import PageThree from "../pageThree/PageThree";
@@ -148,7 +148,7 @@ class MenuSetting extends React.Component {
                         {this.getMenuItemComp(menuOption)}
                     </Menu>
                 </div>
-                <div className="originPageRight" style={{width: this.state.collapsed ? "calc(100% - 64px)" : "calc(100% - 300px)", height: "100%"}}>
+                <div className="originPageRight" style={{width: this.state.collapsed ? "~calc(100% - 64px)" : "~calc(100% - 300px)", height: "100%"}}>
                     {this.getContentComp()}
                 </div>
             </div>

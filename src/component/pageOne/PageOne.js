@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import './pageOne.scss';
+import './pageOne.less';
 
 class PageOne extends React.Component {
     constructor(props) {
