@@ -12,6 +12,7 @@ class BoxItem extends React.Component {
     handleToggle = () => {
         this.setState({isFront: !this.state.isFront});
     }
+    
     render() {
         const { url } = this.props;
         const { isFront } = this.state;
@@ -20,7 +21,7 @@ class BoxItem extends React.Component {
         return (
             <div className="wrapper">
                 <div onClick={this.handleToggle} className={cardClass}>
-                    <div className="card-face card-front" style={{background: `${url} no-repeat center`}}></div>
+                    <div className="card-face card-front" style={{background: `${url} no-repeat center`, backgroundColor: 'black'}}></div>
                     <div className="card-face card-back"></div>
                 </div>
             </div>

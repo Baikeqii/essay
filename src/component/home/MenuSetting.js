@@ -1,6 +1,6 @@
 import React from 'react';
 import {Icon,Card, Menu, Button, Switch} from 'antd';
-import './MenuSetting.scss';
+import './MenuSetting.less';
 import PageOne from '../../component/pageOne/PageOne.js';
 import PageTwo from '../../component/pageTwo/PageTwo.js';
 import PageThree from "../pageThree/PageThree";

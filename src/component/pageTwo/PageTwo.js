@@ -1,7 +1,7 @@
 "use strict"
 
 import React from 'react';
-import './pageTwo.scss';
+import './pageTwo.less';
 class PageTwo extends React.Component {
 
     constructor(props) {

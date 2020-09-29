@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {Checkbox,Modal, Button} from 'antd';
-import './pageThree.scss';
+import './pageThree.less';
 
 class PageThree extends React.Component {
 

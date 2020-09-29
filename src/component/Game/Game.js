@@ -1,5 +1,5 @@
 import React from 'react';
-import './game.scss';
+import './game.less';
 import BoxItem from './BoxItem';
 
 class Game extends React.Component {
