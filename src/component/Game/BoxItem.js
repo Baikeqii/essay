@@ -12,7 +12,6 @@ class BoxItem extends React.Component {
     handleToggle = () => {
         this.setState({isFront: !this.state.isFront});
     }
-    
     render() {
         const { url } = this.props;
         const { isFront } = this.state;
